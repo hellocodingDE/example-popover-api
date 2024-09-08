@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Popover API - Styling - HelloCoding.de</title>
+</head>
+
+<body>
+    <button popovertarget="popover-element">Anzeigen</button>
+
+    <div id="popover-element" popover>
+        <p>Ein kleiner Hinweis für dich!</p>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, <a href="">sed</a> diam nonumy eirmod tempor invidunt ut labore et dolore magna
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+    <style>
+        body {
+            max-width: 1220px;
+            margin: 0 auto;
+            font-family: sans-serif;
+            padding: 16px;
+            line-height: 1.5;
+        }
+
+        #popover-element:popover-open {
+            font-family: sans-serif;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #popover-element::backdrop {
+            background-color: rgba(0, 10, 10, 0.5);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</body>
+
+</html>
